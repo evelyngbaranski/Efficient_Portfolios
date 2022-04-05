@@ -19,7 +19,7 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 #importing from previous task
-from a10task2 import *
+from efficient_port import *
 
 
 #Plotting prices
