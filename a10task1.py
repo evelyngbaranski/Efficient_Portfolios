@@ -9,18 +9,16 @@ Created on Sun Mar 27 15:36:10 2022
 
 #Evelyn Baranski
 #3/27/22
-#Assignment 10: Efficient Portfolios
+#Efficient Portfolios
 
 
-#This file, a10task1 is performing linear algebra with numpy for
-#bond pricing and analytics
+#This file is obtaining bond pricing and analytics using linear algebra & numpy
 
 #importing necessary packages
 import numpy as np
 from numpy.linalg import inv
 
 
-#Function 1
 def bond_price(times, cashflows, rate):
     """This function calculates and returns the price of a bond
     given cashflows and discount rate using linear algebra.
