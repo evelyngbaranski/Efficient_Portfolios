@@ -7,11 +7,10 @@ Created on Tue Mar 29 15:50:00 2022
 
 #Evelyn Baranski
 #3/29/22
-#Assignment 10: Efficient Portfolios
+#Efficient Portfolios
 
 
-#This file, a10task2 is working on efficient portfolios
-#and the efficient frontier
+#This file is creating efficient portfolios and determining efficient froniter
 
 
 #importing necessary packages
@@ -23,7 +22,6 @@ import datetime as dt
 
 
 
-#Function 1
 def calc_portfolio_return(e, w):
     """This function calculates and returns the portfolio 
     return (as a float) for a portfolio of n >= 2 assets.
@@ -40,7 +38,7 @@ def calc_portfolio_return(e, w):
     return ret
 
 
-#Function 2
+
 def calc_portfolio_stdev(v, w):
     """This function calculates and returns the portfolio
     standard deviation as a float for a portfolio of n >= 2 assets.
@@ -57,7 +55,7 @@ def calc_portfolio_stdev(v, w):
     return std
 
 
-#Function 3
+
 def calc_global_min_variance_portfolio(v):
     """This function returns portfolio weights corresponding to
     the global minimum variance portfolio. Function will find
@@ -88,7 +86,7 @@ def calc_global_min_variance_portfolio(v):
 
 
 
-#Function 4
+
 def calc_min_variance_portfolio(e, v, r):
     """This function finds and returns the portfolio
     weights corresponding to the minimum variance
@@ -122,7 +120,6 @@ def calc_min_variance_portfolio(e, v, r):
     return wp    
 
 
-#function 5
 def calc_efficient_portfolios_stdev(e, v, rs):
     """This function finds a series of minimum variance portfolios
     and returns their standard deviations using loop and accumulator
@@ -160,7 +157,7 @@ def calc_efficient_portfolios_stdev(e, v, rs):
     return deviations
         
 
-#Function 6
+
 def get_stock_prices_from_csv_files(symbols):
     """This function obtains a pd dataframe with historical
     stock prices for several stocks within the list symbols.
@@ -202,7 +199,6 @@ def get_stock_prices_from_csv_files(symbols):
         
 
 
-#Function 7
 def get_stock_returns_from_csv_files(symbols):
     """This function returns a pd df containing stock return values
     from a list of symbols -- csv files for stock values"""
@@ -224,7 +220,6 @@ def get_stock_returns_from_csv_files(symbols):
     
 
 
-#Function 8
 def get_covariance_matrix(returns):
     """This function generates a covariance matrix for the
     stock returns in returns."""
@@ -243,34 +238,6 @@ def get_covariance_matrix(returns):
 
 
 if __name__ == '__main__':
-    # e = np.matrix([0.1, 0.11, 0.08])
-    # w = np.matrix([1,1,1]) / 3
-    
-    # print(calc_portfolio_return(e, w))
-    
-    # e = np.matrix([0.12, 0.05, 0.09])
-    # w = np.matrix([0.3, 0.4, 0.3])
-    # print(calc_portfolio_return(e, w))
-    
-    # w = np.matrix([0.4, 0.3, 0.3])
-    # v = np.matrix([[0.2, 0, 0], [0, 0.1, 0], [0, 0, 0.15]])
-    # print(calc_portfolio_stdev(v, w))
-    
-    # v = np.matrix([[0.2, 0, 0], [0, 0.1, 0], [0, 0, 0.15]])
-    # w = calc_global_min_variance_portfolio(v)
-    # print(w)
-
-    # e = np.matrix([0.1, 0.11, 0.08])
-    # v = np.matrix([[0.2, 0, 0], [0, 0.1, 0], [0, 0, 0.15]])
-    # w = calc_min_variance_portfolio(e, v, 0.09)
-    # print(w)
-    
-    # print(calc_portfolio_return(e, w))
-    
-    # e = np.matrix([0.12, 0.11, 0.08])
-    # v = np.matrix([[0.3, 0.2, 0.1], [0.2, 0.25, 0.1], [0.1, 0.1, 0.2]])
-    # w = calc_min_variance_portfolio(e, v, 0.09)
-    # print(w)
     
     e = np.matrix([0.1, 0.11, 0.08])
     v = np.matrix([[0.2, 0, 0], [0, 0.1, 0], [0, 0, 0.15]])
