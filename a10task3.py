@@ -7,11 +7,10 @@ Created on Wed Mar 29 16:03:23 2022
 
 #Evelyn Baranski
 #3/29/22
-#Assignment 10: Efficient Portfolios
+#Efficient Portfolios
 
 
-#This assignment, assignment 10 task 3, is graphing with
-#pandas and matplotlib
+#This file is plotting stock prices, cumulative change, and efficient frontier
 
 
 #Importing required packages
@@ -23,7 +22,7 @@ import matplotlib.pyplot as plt
 from a10task2 import *
 
 
-#Function 1
+#Plotting prices
 def plot_stock_prices(symbols):
     """This function creates a graph of historical stock
     prices for however many stocks given in string 
@@ -55,7 +54,7 @@ def plot_stock_prices(symbols):
     plt.show()
 
 
-#Function 2
+#Plotting cumulative change
 def plot_stock_cumulative_change(symbols):
     """This function plots a graph of cumulative stock returns for
     stocks within the list, symbols. Monthly cumulative stock returns."""
@@ -91,7 +90,7 @@ def plot_stock_cumulative_change(symbols):
 
 
 
-#Function 3
+#Plotting efficient frontier
 def plot_efficient_frontier(symbols):
     """This function creates a graph of the efficient frontier
     (set of min var portfolios) that can be aacheived using
